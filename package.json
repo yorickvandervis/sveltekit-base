@@ -33,6 +33,7 @@
 		"drizzle-kit": "^0.30.2",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
+		"eslint-plugin-perfectionist": "^4.15.0",
 		"eslint-plugin-svelte": "^3.0.0",
 		"globals": "^16.0.0",
 		"playwright": "^1.53.0",
@@ -51,6 +52,9 @@
 	},
 	"dependencies": {
 		"@inlang/paraglide-js": "^2.0.0",
+		"@polar-sh/better-auth": "^1.0.4",
+		"@polar-sh/sdk": "^0.34.3",
+		"better-auth": "^1.2.12",
 		"drizzle-orm": "^0.40.0",
 		"postgres": "^3.4.5"
 	},
