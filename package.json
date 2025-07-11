@@ -61,7 +61,10 @@
 		"@polar-sh/sdk": "^0.34.3",
 		"better-auth": "^1.2.12",
 		"drizzle-orm": "^0.40.0",
-		"postgres": "^3.4.5"
+		"formsnap": "^2.0.1",
+		"postgres": "^3.4.5",
+		"sveltekit-superforms": "^2.27.1",
+		"zod": "^4.0.5"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
