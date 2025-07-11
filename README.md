@@ -41,21 +41,25 @@ A comprehensive SvelteKit starter template with authentication, database integra
 ## Dependencies
 
 ### Core Framework
+
 - **SvelteKit** - Full-stack web framework
 - **Svelte** - Reactive component framework
 - **Vite** - Build tool and development server
 
 ### Authentication & Security
+
 - **Better Auth** - Authentication library
 - **@polar-sh/better-auth** - Polar integration for Better Auth
 - **@polar-sh/sdk** - Polar SDK for payments
 
 ### Database
+
 - **Drizzle ORM** - TypeScript ORM
 - **postgres** - PostgreSQL client
 - **drizzle-kit** - Database toolkit
 
 ### UI & Styling
+
 - **Tailwind CSS** - Utility-first CSS framework
 - **@tailwindcss/vite** - Vite plugin for Tailwind
 - **@lucide/svelte** - Icon library
@@ -64,20 +68,24 @@ A comprehensive SvelteKit starter template with authentication, database integra
 - **tailwind-variants** - Variant API for Tailwind
 
 ### Forms & Validation
+
 - **sveltekit-superforms** - Form handling library
 - **formsnap** - Form components
 - **zod** - Schema validation
 
 ### Internationalization
+
 - **@inlang/paraglide-js** - Internationalization library
 
 ### Testing
+
 - **Vitest** - Unit testing framework
 - **@vitest/browser** - Browser testing
 - **Playwright** - E2E testing
 - **@playwright/test** - Playwright test runner
 
 ### Development Tools
+
 - **TypeScript** - Type checking
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
@@ -112,12 +120,14 @@ POLAR_WEBHOOK_SECRET="your_polar_webhook_secret"
 ### Setting up OAuth Providers
 
 #### GitHub OAuth
+
 1. Go to GitHub Settings → Developer settings → OAuth Apps
 2. Create a new OAuth App
 3. Set Authorization callback URL to: `http://localhost:5173/api/auth/callback/github`
 4. Copy the Client ID and Client Secret to your `.env` file
 
 #### Google OAuth
+
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a new project or select an existing one
 3. Enable the Google+ API
@@ -126,6 +136,7 @@ POLAR_WEBHOOK_SECRET="your_polar_webhook_secret"
 6. Copy the Client ID and Client Secret to your `.env` file
 
 #### Polar Integration
+
 1. Sign up at [Polar](https://polar.sh/)
 2. Create an application and get your access token
 3. Set up webhook endpoints in your Polar dashboard
@@ -134,6 +145,7 @@ POLAR_WEBHOOK_SECRET="your_polar_webhook_secret"
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 18+
 - pnpm (recommended) or npm
 - Docker and Docker Compose (for database)
@@ -141,33 +153,39 @@ POLAR_WEBHOOK_SECRET="your_polar_webhook_secret"
 ### Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone <your-repo-url>
 cd sveltekit-base
 ```
 
 2. **Install dependencies**
+
 ```bash
 pnpm install
 ```
 
 3. **Set up environment variables**
+
 ```bash
 cp .env.example .env
 # Edit .env with your actual values
 ```
 
 4. **Start the database**
+
 ```bash
 pnpm run db:start
 ```
 
 5. **Push database schema**
+
 ```bash
 pnpm run db:push
 ```
 
 6. **Start development server**
+
 ```bash
 pnpm run dev
 ```
@@ -207,15 +225,16 @@ pnpm run check         # Type check
 
 The application uses PostgreSQL with Drizzle ORM. The database schema includes:
 
-- **Users**: User accounts with email verification
+- **Users**: User accounts
 - **Sessions**: User session management
 - **Accounts**: OAuth account linking
-- **Organizations**: Team/organization support
+- **Organizations**: Team/Organization support
 - **Members**: Organization membership
 - **Invitations**: Organization invitations
 - **Verification**: Email verification tokens
 
 To view and manage your database:
+
 ```bash
 pnpm run db:studio
 ```
@@ -223,11 +242,13 @@ pnpm run db:studio
 ### Internationalization
 
 The app supports multiple languages using Paraglide:
+
 - English (en) - default
 - Spanish (es)
 - Dutch (nl)
 
 Translation files are located in the `messages/` directory. To add a new language:
+
 1. Add the locale to `project.inlang/settings.json`
 2. Create a new message file in `messages/{locale}.json`
 3. Add translations for all message keys
@@ -251,6 +272,7 @@ npx shadcn-svelte@latest add button
 The application can be deployed to various platforms:
 
 1. **Build the application**
+
 ```bash
 pnpm run build
 ```
@@ -259,6 +281,7 @@ pnpm run build
 3. **Deploy the built application**
 
 Make sure to:
+
 - Set up a production PostgreSQL database
 - Configure OAuth redirect URIs for your production domain
 - Set up Polar webhooks for your production URL
