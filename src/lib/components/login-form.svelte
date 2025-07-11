@@ -86,7 +86,7 @@
 									fill="currentColor"
 								/>
 							</svg>
-							Login with Github
+							Login with Google
 						</Button>
 					</div>
 					<div

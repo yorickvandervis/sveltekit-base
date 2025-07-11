@@ -2,42 +2,6 @@
 
 A comprehensive SvelteKit starter template with authentication, database integration, internationalization, and modern development tools.
 
-## Features
-
-- **Authentication**: Multi-provider authentication with Better Auth
-  - Email/password authentication
-  - Social login (GitHub, Google)
-  - Organization/team management
-  - User sessions and account management
-- **Database**: PostgreSQL with Drizzle ORM
-  - Type-safe database operations
-  - Migration system
-  - Docker Compose for local development
-- **Internationalization**: Multi-language support with Paraglide
-  - Support for English, Spanish, and Dutch
-  - Type-safe translations
-- **Payment Integration**: Polar integration for subscriptions and payments
-  - Checkout flow
-  - Customer portal
-  - Usage tracking
-  - Webhook handling
-- **UI Components**: Shadcn/ui components with Tailwind CSS
-  - Pre-configured component library
-  - Responsive design system
-  - Dark/light mode ready
-- **Form Handling**: Superforms with Zod validation
-  - Type-safe form validation
-  - Server-side form handling
-- **Testing**: Complete testing setup
-  - Unit tests with Vitest
-  - E2E tests with Playwright
-  - Browser testing support
-- **Development Tools**: Modern development experience
-  - TypeScript support
-  - ESLint and Prettier configuration
-  - Hot module reloading
-  - Docker support
-
 ## Dependencies
 
 ### Core Framework
