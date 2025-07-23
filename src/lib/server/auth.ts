@@ -3,6 +3,7 @@ import {
 	GITHUB_CLIENT_SECRET,
 	GOOGLE_CLIENT_ID,
 	GOOGLE_CLIENT_SECRET,
+	POLAR_ACCESS_TOKEN,
 	POLAR_WEBHOOK_SECRET
 } from '$env/static/private';
 import { checkout, polar, portal, usage, webhooks } from '@polar-sh/better-auth';
@@ -12,12 +13,14 @@ import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { organization } from 'better-auth/plugins';
 
 const polarClient = new Polar({
-	accessToken: process.env.POLAR_ACCESS_TOKEN,
+	accessToken: POLAR_ACCESS_TOKEN,
 	// Use 'sandbox' if you're using the Polar Sandbox environment
 	// Remember that access tokens, products, etc. are completely separated between environments.
 	// Access tokens obtained in Production are for instance not usable in the Sandbox environment.
 	server: 'sandbox'
 });
+
+import { PUBLIC_TEST_PRODUCT_ID } from '$env/static/public';
 
 import { db } from './db'; // your drizzle instance
 
@@ -35,10 +38,10 @@ export const auth = betterAuth({
 			createCustomerOnSignUp: true,
 			use: [
 				checkout({
-					authenticatedUsersOnly: true,
+					authenticatedUsersOnly: false,
 					products: [
 						{
-							productId: '123-456-789', // ID of Product from Polar Dashboard
+							productId: PUBLIC_TEST_PRODUCT_ID, // ID of Product from Polar Dashboard
 							slug: 'pro' // Custom slug for easy reference in Checkout URL, e.g. /checkout/pro
 						}
 					],

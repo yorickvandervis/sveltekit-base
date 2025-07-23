@@ -25,7 +25,7 @@
 							<img src={$session.data.user.image} alt="Profile" class="h-8 w-8 rounded-full" />
 						{/if}
 						<button
-							on:click={async () => {
+							onclick={async () => {
 								await authClient.signOut();
 							}}
 							class="rounded-md bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:outline-none"
@@ -54,7 +54,6 @@
 	</div>
 </header>
 
-<!-- Hero Section -->
 <section>
 	<div class="pt-16">
 		<div class="mx-auto max-w-5xl px-6">
@@ -65,7 +64,9 @@
 					</h2>
 					<p class="text-muted-foreground mt-6">
 						You're now signed in and can access all features. Explore the tools below to enhance
-						your workflow.
+						your workflow. <a class="text-blue-500 hover:underline" href="/dashboard"
+							>Go to dashboard.</a
+						>
 					</p>
 				{:else}
 					<h2 class="text-3xl font-semibold text-balance md:text-4xl">Welcome to SvelteKit Base</h2>
@@ -78,7 +79,6 @@
 	</div>
 </section>
 
-<!-- Tools Integration Section -->
 <section>
 	<div class="mx-auto max-w-5xl px-6">
 		<div class="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
